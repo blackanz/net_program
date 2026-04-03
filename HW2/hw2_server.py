@@ -5,16 +5,16 @@ s.bind(('', 9000))
 s.listen(2)
 
 while True:
-    client, addr = s.accept()
-    print('Connection from ', addr)
-    client.send(b'Hello '+addr[0].encode())
+  client, addr = s.accept()
+  print('Connection from ', addr)
+  client.send(b'Hello '+addr[0].encode())
 
-    # 이름 수신
-    n = client.recv(1024)
-    print(n.decode())
+  # 이름 수신
+  n = client.recv(1024)
+  print(n.decode())
 
-    # 학번 전송
-    id = 20211500
-    client.send(id.to_bytes(4, 'big'))
+  # 학번 전송
+  id = 20211500
+  client.send(id.to_bytes(4, 'big'))
 
-    client.close()
+  client.close()
