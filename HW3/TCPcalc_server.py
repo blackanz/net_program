@@ -25,13 +25,13 @@ def calc(exp):
 
   try:
     if op == '+':
-      return str(x+y)
+      return str(x + y)
     elif op == '-':
-      return str(x-y)
+      return str(x - y)
     elif op == '*':
-      return str(x*y)
+      return str(x * y)
     elif op == '/':
-      return f'{x/y:.1f}'
+      return f'{x / y:.1f}'
   except ZeroDivisionError:
     return "Can't divide by zero!"
   return 'Fail to calculate'
